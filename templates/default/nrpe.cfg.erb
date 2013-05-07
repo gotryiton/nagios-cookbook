@@ -17,3 +17,4 @@ command[check_total_procs]=/usr/lib/nagios/plugins/check_procs -w 500 -c 800
 command[check_swap]=/usr/lib/nagios/plugins/check_swap -w '50%' -c '25%'
 command[check_mem]=/usr/lib/nagios/plugins/check_mem.sh -w 250 -c 150 -p
 command[check_load]=/usr/lib/nagios/plugins/check_load -w 15,10,5 -c 30,20,10
+command[check_ootd_app]=/usr/lib/nagios/plugins/check_http -w 2 -c 4 -I 127.0.0.1 -H theootdapp.com -u /status -s "\"ok\":\"true\""

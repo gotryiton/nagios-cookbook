@@ -75,4 +75,4 @@ default['nagios']['nrpe']['checksum'] = '808c7c4a82d0addf15449663e4712b5018c8bbd
 
 default['nagios']['server_role'] = 'monitoring'
 default['nagios']['allowed_hosts'] = nil
-default['nagios']['additional_plugins'] = ['check_mem.sh']
+default['nagios']['nrpe']['additional_plugins'] = ['check_mem.sh']

@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-node['nagios']['client']['additional_plugins'].each do |plugin|
+node['nagios']['nrpe']['additional_plugins'].each do |plugin|
   cookbook_file "#{node['nagios']['nrpe']['home']}/plugins/#{plugin}" do
     source "plugins/#{plugin}"
     mode 00755

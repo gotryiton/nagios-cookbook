@@ -71,3 +71,5 @@ service node['nagios']['nrpe']['service_name'] do
   action [:start, :enable]
   supports :restart => true, :reload => true, :status => true
 end
+
+include_recipe "nagios::client_additional_plugins"
